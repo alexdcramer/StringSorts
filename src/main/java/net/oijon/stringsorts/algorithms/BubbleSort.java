@@ -1,6 +1,10 @@
-package net.oijon.stringsorts;
+package net.oijon.stringsorts.algorithms;
 
 import java.util.ArrayList;
+
+import net.oijon.stringsorts.Comparer;
+import net.oijon.stringsorts.Comparison;
+import net.oijon.stringsorts.SortingAlgorithm;
 
 public class BubbleSort extends SortingAlgorithm {
 
