@@ -32,6 +32,8 @@ public class MergeSort {
 			listA = sort(listA, mode);
 			listB = sort(listB, mode);
 			
+		} else {
+			return list;
 		}
 			
 		// merge
@@ -69,27 +71,28 @@ public class MergeSort {
 				if (indexA < listA.size() & indexB < listB.size()) {
 					int compNum = c.compare(listA.get(indexA), listB.get(indexB));
 					switch (compNum) {
-						case -1:
-							mergedList.set(i, listB.get(indexB));
+						case 1:
+							mergedList.add(i, listB.get(indexB));
 							indexB++;
 							break;
 						default:
 							// prioritizes list A if two components are equal, on next iteration it will grab from B if it also isn't equal
-							mergedList.set(i, listA.get(indexA));
+							mergedList.add(i, listA.get(indexA));
 							indexA++;
 							break;
 					}
 				} else if (indexA >= listA.size()) {
-					mergedList.set(i, listB.get(indexB));
+					mergedList.add(i, listB.get(indexB));
 					indexB++;
 				} else if (indexB >= listB.size()) {
-					mergedList.set(i, listA.get(indexA));
+					mergedList.add(i, listA.get(indexA));
 					indexA++;
 				}
 			}
 		}		
 		return mergedList;
 	}
+
 
 	public static String[] sort(String[] list, Comparison mode) {
 		// split
@@ -110,6 +113,8 @@ public class MergeSort {
 			listA = sort(listA, mode);
 			listB = sort(listB, mode);
 			
+		} else {
+			return list;
 		}
 		
 		// merge
@@ -147,7 +152,7 @@ public class MergeSort {
 				if (indexA < listA.length & indexB < listB.length) {
 					int compNum = c.compare(listA[indexA], listB[indexB]);
 					switch (compNum) {
-						case -1:
+						case 1:
 							mergedList[i] = listB[indexB];
 							indexB++;
 							break;

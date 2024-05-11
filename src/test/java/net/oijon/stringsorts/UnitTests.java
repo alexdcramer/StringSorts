@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 
 import net.oijon.stringsorts.algorithms.BubbleSort;
+import net.oijon.stringsorts.algorithms.MergeSort;
 
 public class UnitTests {
 	
@@ -83,6 +84,26 @@ public class UnitTests {
 		
 		sortedSA = BubbleSort.sort(unsortedStringArr, Comparison.SIZE);
 		sortedAL = BubbleSort.sort(unsortedArrayList, Comparison.SIZE);
+		verifySize(sortedSA);
+		verifySize(sortedAL);
+	}
+	
+	@Test
+	void testMergeSort() {
+		initArrLists();
+		
+		String[] sortedSA = MergeSort.sort(unsortedStringArr);
+		ArrayList<String> sortedAL = MergeSort.sort(unsortedArrayList);
+		verifyAlphabetical(sortedSA);
+		verifyAlphabetical(sortedAL);
+		
+		sortedSA = MergeSort.sort(unsortedStringArr, Comparison.ALPHABETICAL);
+		sortedAL = MergeSort.sort(unsortedArrayList, Comparison.ALPHABETICAL);
+		verifyAlphabetical(sortedSA);
+		verifyAlphabetical(sortedAL);
+		
+		sortedSA = MergeSort.sort(unsortedStringArr, Comparison.SIZE);
+		sortedAL = MergeSort.sort(unsortedArrayList, Comparison.SIZE);
 		verifySize(sortedSA);
 		verifySize(sortedAL);
 	}
