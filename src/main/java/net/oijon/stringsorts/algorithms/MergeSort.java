@@ -4,22 +4,18 @@ import java.util.ArrayList;
 
 import net.oijon.stringsorts.Comparer;
 import net.oijon.stringsorts.Comparison;
-import net.oijon.stringsorts.SortingAlgorithm;
 
-public class MergeSort extends SortingAlgorithm {
+public class MergeSort {
 
-	@Override
-	public ArrayList<String> sort(ArrayList<String> list) {
+	public static ArrayList<String> sort(ArrayList<String> list) {
 		return sort(list, Comparison.ALPHABETICAL);
 	}
 
-	@Override
-	public String[] sort(String[] list) {
+	public static String[] sort(String[] list) {
 		return sort(list, Comparison.ALPHABETICAL);
 	}
 
-	@Override
-	public ArrayList<String> sort(ArrayList<String> list, Comparison mode) {
+	public static ArrayList<String> sort(ArrayList<String> list, Comparison mode) {
 		// split
 		
 		ArrayList<String> listA = new ArrayList<String>();
@@ -95,8 +91,7 @@ public class MergeSort extends SortingAlgorithm {
 		return mergedList;
 	}
 
-	@Override
-	public String[] sort(String[] list, Comparison mode) {
+	public static String[] sort(String[] list, Comparison mode) {
 		// split
 		
 		String[] listA = new String[0];

@@ -4,22 +4,21 @@ import java.util.ArrayList;
 
 import net.oijon.stringsorts.Comparer;
 import net.oijon.stringsorts.Comparison;
-import net.oijon.stringsorts.SortingAlgorithm;
 
-public class BubbleSort extends SortingAlgorithm {
+public class BubbleSort {
 
-	@Override
-	public ArrayList<String> sort(ArrayList<String> list) {
+	
+	public static ArrayList<String> sort(ArrayList<String> list) {
 		return sort(list, Comparison.ALPHABETICAL);
 	}
 
-	@Override
-	public String[] sort(String[] list) {
+	
+	public static String[] sort(String[] list) {
 		return sort(list, Comparison.ALPHABETICAL);
 	}
 
-	@Override
-	public ArrayList<String> sort(ArrayList<String> list, Comparison mode) {
+	
+	public static ArrayList<String> sort(ArrayList<String> list, Comparison mode) {
 		Comparer c = new Comparer(mode);
 		ArrayList<String> newList = new ArrayList<String>(list);
 		for (int i = 0; i < list.size() - 1; i++) {
@@ -33,8 +32,8 @@ public class BubbleSort extends SortingAlgorithm {
 		return newList;
 	}
 
-	@Override
-	public String[] sort(String[] list, Comparison mode) {
+	
+	public static String[] sort(String[] list, Comparison mode) {
 		Comparer c = new Comparer(mode);
 		String[] newList = new String[list.length];
 		
