@@ -2,6 +2,8 @@ package net.oijon.stringsorts;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+
+import java.time.Instant;
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
@@ -71,7 +73,6 @@ public class UnitTests {
 	@Test
 	void testBubbleSort() {
 		initArrLists();
-		
 		String[] sortedSA = BubbleSort.sort(unsortedStringArr);
 		ArrayList<String> sortedAL = BubbleSort.sort(unsortedArrayList);
 		verifyAlphabetical(sortedSA);
@@ -91,7 +92,6 @@ public class UnitTests {
 	@Test
 	void testMergeSort() {
 		initArrLists();
-		
 		String[] sortedSA = MergeSort.sort(unsortedStringArr);
 		ArrayList<String> sortedAL = MergeSort.sort(unsortedArrayList);
 		verifyAlphabetical(sortedSA);
