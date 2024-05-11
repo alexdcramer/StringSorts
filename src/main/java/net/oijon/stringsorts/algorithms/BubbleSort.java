@@ -23,11 +23,11 @@ public class BubbleSort extends SortingAlgorithm {
 		Comparer c = new Comparer(mode);
 		ArrayList<String> newList = new ArrayList<String>(list);
 		for (int i = 0; i < list.size() - 1; i++) {
-			if (c.compare(newList.get(i), newList.get(i + 1)) == -1) {
+			if (c.compare(newList.get(i), newList.get(i + 1)) == 1) {
 				String placeholder = newList.get(i);
 				newList.set(i, newList.get(i + 1));
 				newList.set(i + 1, placeholder);
-				i = 0;
+				i = -1;
 			}
 		}
 		return newList;
@@ -43,11 +43,11 @@ public class BubbleSort extends SortingAlgorithm {
 		}
 		
 		for (int i = 0; i < list.length - 1; i++) {
-			if (c.compare(newList[i], newList[i + 1]) == -1) {
+			if (c.compare(newList[i], newList[i + 1]) == 1) {
 				String placeholder = newList[i];
 				newList[i] = newList[i + 1];
 				newList[i + 1] = placeholder;
-				i = 0;
+				i = -1;
 			}
 		}
 		return newList;

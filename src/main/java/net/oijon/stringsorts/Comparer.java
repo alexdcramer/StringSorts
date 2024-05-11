@@ -84,7 +84,14 @@ public class Comparer {
 	 * @return 0 if a == b; 1 if a > b, -1 if a < b
 	 */
 	private int compareSize(String a, String b) {
-		return a.compareTo(b);
+		if (a.length() != b.length()) {
+			if (a.length() > b.length()) {
+				return 1;
+			} else {
+				return -1;
+			}
+		}
+		return 0;
 	}
 	
 }

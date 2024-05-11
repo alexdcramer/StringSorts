@@ -5,4 +5,12 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>StringSorts</name>
   <description>A library for sorting strings, using various sorting algorithms</description>
+  <dependencies>
+	  <dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.9.3</version>
+			<scope>test</scope>
+		</dependency>
+  </dependencies>
 </project>
